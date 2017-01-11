@@ -1,0 +1,51 @@
+<html>
+
+  <head>
+    <title>Bar Chart Using TypeScript</title>
+
+    <!-- 1. Load libraries -->
+    <!-- IE required polyfills, in this exact order -->
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="styles/bar-chart/bar-chart.css"></link>
+    <script src="https://use.fontawesome.com/5a609ccd9d.js"></script>
+  </head>
+
+  <body>
+  <div>
+   <div class="row">
+      <div class="col-xs-6">
+         <button class="btn btn-primary vBtn">Vertical bar chart</button>
+      </div>
+      <div class="col-xs-6">
+         <button class="btn btn-primary hBtn">Horizontal bar chart</button>
+      </div>
+      <div id="bar-chart" class="col-md-12"></div>
+   </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+
+  <script src="scripts/dataset.js"></script>
+  <script src="scripts/vertical-bar-chart/bar-chart.js"></script>
+  <script src="scripts/horizontal-bar-chart/bar-chart.js"></script>
+
+  <script>
+  $("body")
+          .on("click", ".vBtn", function() {
+             new VerticalChart();
+          })
+          .on("click", ".hBtn", function() {
+            // alert("not completd yet");
+             new HorizontalChart();
+          });
+  </script>
+</body>
+</html>
